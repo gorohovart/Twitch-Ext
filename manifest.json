@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Twitch Sample App",
+  "version": "4",
+  "background": {
+      "scripts": ["main.js"]  
+  },
+  "permissions": [
+  	"contextMenus",
+  	"http://localhost/*"
+  	]
+}
