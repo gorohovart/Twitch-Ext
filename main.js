@@ -3,7 +3,7 @@ function setUpContextMenus() {
     id : "VLCTwitch",
     title : "Open in VLC",
     type : "normal",
-    contexts : ["selection", "link"],
+    contexts : ["link"],
     targetUrlPatterns: ["*://www.twitch.tv/*"]
   });
 }
@@ -42,11 +42,6 @@ function httpPOST(data)
 
 function getClickHandler(info) {
     var url;
-    if (info.selectionText == null){
-      url = info.linkUrl;
-    }
-    else {
-      url = info.selectionText;
-    }
+    url = info.linkUrl;
     httpPOST(url);
 }
